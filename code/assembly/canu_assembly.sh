@@ -13,6 +13,7 @@ module load Canu/1.7
 
 # Assembly with canu
 canu \
--p dna_assembly_lferriphilum -d /home/bella/genome_analysis/dna_analysis/assembly \
+-p 1_canu_dna_assembly -d /home/bella/genome_analysis/dna_analysis/assembly \
 genomeSize=2.4m \
+stopOnReadQuality=false \
 -pacbio-raw /home/bella/genome_analysis/data/dna/ERR2028?.fastq.gz
