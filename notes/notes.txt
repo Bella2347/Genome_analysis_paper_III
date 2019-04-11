@@ -1,0 +1,14 @@
+#These are the number of lines in each raw-data file, each read takes up 4 lines,
+#the number of reads would therefore be:
+1418997
+1350295
+1436091
+1914981
+1775255
+2005816
+=
+9901435
+
+9901435/4
+=
+2475359
