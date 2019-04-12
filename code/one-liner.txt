@@ -3,3 +3,6 @@
 
 # Count number of contigs in the assembly, it should equal 7 which it does
 grep '^>' 1_assembly/1_canu_dna_assembly.contigs.fasta |wc -l
+
+# awk command to slipt contigs into seperate fasta files
+awk '/^>/ {F = $2".fasta"} {print > F}' ../1_canu_dna_assembly.contigs.fasta
