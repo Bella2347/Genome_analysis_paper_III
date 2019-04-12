@@ -1,3 +1,6 @@
+The DNA data can be found at: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP023978
+The RNA data can be found at: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP024141
+
 #These are the number of lines in each raw-data file, each read takes up 4 lines,
 #the number of reads would therefore be:
 1418997
