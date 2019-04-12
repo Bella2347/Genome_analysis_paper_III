@@ -1,2 +1,8 @@
 # The way to the data
 /proj/g2019003/nobackup/private/3_Christel_2017/
+
+# Count number of contigs in the assembly, it should equal 7 which it does
+grep '^>' 1_assembly/1_canu_dna_assembly.contigs.fasta |wc -l
+
+# awk command to slipt contigs into seperate fasta files
+awk '/^>/ {F = $2".fasta"} {print > F}' ../1_canu_dna_assembly.contigs.fasta

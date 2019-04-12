@@ -1,0 +1,6 @@
+# Annotation with prokka
+
+-outdir /home/bella/genome_analysis/dna_analysis/3_annotation/
+-prefix 1_prokka_annotation
+-genus leptospirillum
+-species ferriphilum
