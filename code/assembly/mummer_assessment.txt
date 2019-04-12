@@ -4,26 +4,9 @@
 generated the file out.delta
 
 >mummerplot out.delta
-Gave this out:
->gnuplot 4.6 patchlevel 2
->Reading delta file out.delta
->Writing plot files out.fplot, out.rplot
->Writing gnuplot script out.gp
->Forking mouse listener
->Rendering plot to screen
->
->gnuplot: unable to open display 'localhost:53.0'
->gnuplot: X11 aborted.
->Error: Can't open display: localhost:53.0
->WARNING: Unable to query clipboard with xclip
->^X^H^H^H^H
->-- INTERACTIVE MODE --
->consult gnuplot docs for command list
->mouse 1: coords to clipboard
->mouse 2: mark on plot
->mouse 3: zoom box
->'h' for help in plot window
->enter to exit
-
 Generated these files:
 >out.fplot  out.gp  out.rplot
+
+To view the file:
+>gnuplot
+>>load "out.gp"
