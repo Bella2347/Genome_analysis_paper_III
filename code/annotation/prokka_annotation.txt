@@ -4,3 +4,8 @@
 -prefix 1_prokka_annotation
 -genus leptospirillum
 -species ferriphilum
+
+# Used this command to annotate with prokka
+prokka -outdir /home/bella/genome_analysis/dna_analysis/3_annotation/ -prefix 1_prokka_annotation -genus 
+leptospirillum -species ferriphilum dna_analysis/1_assembly/1_canu_dna_assembly.contigs.fasta
+
