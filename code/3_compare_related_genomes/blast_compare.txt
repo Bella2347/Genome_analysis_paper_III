@@ -1,0 +1,7 @@
+module load bioinfo-tools
+
+blastn -query dna_analysis/1_assembly/1_canu_dna_assembly.contigs.fasta -subject data/ref/paper_assembly.fasta\
+ -out dna_analysis/4_compare_genomes/blastn/canu_v_paper.txt
+
+module load artemis/16.0.0
+
