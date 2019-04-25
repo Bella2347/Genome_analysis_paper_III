@@ -1,0 +1,7 @@
+module load MUMmer/3.23
+
+mummer -mum -b -c ../../../data/ref/paper_assembly.fasta ../../1_assembly/1_canu_dna_assembly.contigs.fasta 
+> paper_canu_mummer.mums
+mummerplot --postscript --prefix=paper_canu_mummer paper_canu_mummer.mums
+
+
