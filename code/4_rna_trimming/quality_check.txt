@@ -1,0 +1,8 @@
+# The quality of the RNA-reads should be checked before trimming to see what the parameters should
+# be set to in the trimming process
+
+module load bioinfo-tools
+module load FastQC/0.11.5
+
+fastqc -o /home/bella/genome_analysis/rna_analysis/1_quality\
+  -f fastq /home/bella/genome_analysis/data/rna/batch_14B_31_1.fastq.gz
