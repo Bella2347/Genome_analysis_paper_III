@@ -11,7 +11,9 @@
 module load bioinfo-tools
 module load trimmomatic/0.36
 
-java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -phred33 /home/bella/genome_analysis/data/rna/batch...1 \
-/home/bella/genome_analysis/data/rna/batch...2 trimmed_batch...1_paired trimmed_batch...1_unpaired \
-trimmed_batch...2_paired trimmmed_batch...2_unpaired ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING TRAILING \
-SLIDINGWINDOW MINLEN
+java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -phred33 /home/bella/genome_analysis/data/rna/batch_14B_31_1.fastq.gz \
+/home/bella/genome_analysis/data/rna/batch_14B_31_2.fastq.gz /home/bella/genome_analysis/rna_analysis/1_trimming/trimmed_batch_14B_31_1_paired.fastq.gz \ 
+/home/bella/genome_analysis/rna_analysis/1_trimming/trimmed_batch_14B_31_1_unpaired.fastq.gz \
+/home/bella/genome_analysis/rna_analysis/1_trimming/trimmed_batch_14B_31_2_paired.fastq.gz \
+/home/bella/genome_analysis/rna_analysis/1_trimming/trimmed_batch_14B_31_2_unpaired.fastq.gz \ 
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING TRAILING SLIDINGWINDOW MINLEN
