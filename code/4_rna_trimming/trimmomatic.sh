@@ -13,8 +13,6 @@ module load trimmomatic/0.36
 
 java -jar $TRIMMOMATIC_HOME/trimmomatic.jar PE -phred33 /home/bella/genome_analysis/data/rna/batch_14B_31_1.fastq.gz \
 /home/bella/genome_analysis/data/rna/batch_14B_31_2.fastq.gz \
-/home/bella/genome_analysis/rna_analysis/2_trimming/trimmed_batch_14B_31_1_paired.fastq.gz \ 
-/home/bella/genome_analysis/rna_analysis/2_trimming/trimmed_batch_14B_31_1_unpaired.fastq.gz \
-/home/bella/genome_analysis/rna_analysis/2_trimming/trimmed_batch_14B_31_2_paired.fastq.gz \
-/home/bella/genome_analysis/rna_analysis/2_trimming/trimmed_batch_14B_31_2_unpaired.fastq.gz \ 
-ILLUMINACLIP:TruSeq3-PE.fa LEADING:28 TRAILING:28 MINLEN:36
+trimmed_batch_14B_31_1_paired.fastq.gz trimmed_batch_14B_31_1_unpaired.fastq.gz \
+trimmed_batch_14B_31_2_paired.fastq.gz trimmed_batch_14B_31_2_unpaired.fastq.gz \ 
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:28 TRAILING:28 MINLEN:36
