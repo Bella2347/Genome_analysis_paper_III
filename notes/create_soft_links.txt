@@ -4,4 +4,6 @@ ln -s /proj/g2019003/nobackup/private/3_Christel_2017/DNA_raw_data/ERR2028496.fa
 # Creat soft link to the reference sequence in the course papper_III folder
 ln -s /proj/g2019003/nobackup/private/3_Christel_2017/reference/OBMB01.fasta
 
-
+# Trimmed RNA-reads
+ln -s /proj/g2019003/nobackup/private/3_Christel_2017/RNA_trimmed_reads/ERR2036633_S2.trim.fastq.gz 
+trimmed_cont_B6_33_S2.fastq.gz
