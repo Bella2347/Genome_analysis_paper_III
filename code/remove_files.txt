@@ -1,0 +1,6 @@
+rm pre.contigs.layout*
+rm pre.unitigs.layout*
+rm pre.trimmedReads.fasta.qz
+rm pre.unassembled.fasta
+rm pre.correctedReads.fasta.gz
+rm pre.contigs.fasta.*
