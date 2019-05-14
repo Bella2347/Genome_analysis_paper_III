@@ -6,3 +6,6 @@ grep '^>' 1_assembly/1_canu_dna_assembly.contigs.fasta |wc -l
 
 # awk command to slipt contigs into seperate fasta files
 awk '/^>/ {F = $2".fasta"} {print > F}' ../1_canu_dna_assembly.contigs.fasta
+
+# remove the fasta sequence at the end of the gff file
+sed '/^##FASTA$/,$d' 1_prokka_annotation.gff > prokka_annotation_without_fasta.gff
