@@ -10,14 +10,14 @@
 # Load modules
 module load bioinfo-tools htseq/0.9.1
 
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_b1.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b1.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_b2.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b2.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_b3.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b3.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_b4.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b4.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_b1.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b1.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_b2.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b2.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_b3.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b3.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_b4.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_b4.txt
 
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c1.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c1.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c2.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c2.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c3.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c3.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c4.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c4.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c5.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c5.txt
-htseq-count --format=bam --order=name --stranded=no --type=CDS ../3_mapping/bwa_sorted_paired_c6.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c6.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c1.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c1.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c2.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c2.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c3.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c3.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c4.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c4.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c5.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c5.txt
+htseq-count --format=bam --order=name --stranded=no --type=CDS --idattr=ID ../3_mapping/bwa_sorted_paired_c6.bam ../../dna_analysis/3_annotation/prokka/prokka_annotation_without_fasta.gff > htseq_count_c6.txt
