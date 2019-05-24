@@ -1,0 +1,20 @@
+# R-code used for the DESeq analysis
+source("https://bioconductor.org/biocLite.R")
+biocLite("DESeq2")
+
+b1 <- read.table("../rna_analysis/4_count/htseq_count_b1.txt", header=FALSE, sep="\t”) # Load the count data
+...
+colnames(b1) <- c("gene", "b1")			# Set the column names
+...
+
+count_table <- merge(b1, b2, by = "gene")	# Merge the count-data into one data frame
+count_data <- count_table[,-1]			# Save new dataset without the gene names
+
+rownames(count_data) <- count_table[,1]	# Set the row names as the gene names
+
+coldata <- read.tabel(“infromation_on_runs.csv”, header=TRUE, sep=”,”) # Read in information about the runs
+coldata <- coldata[-c(10),]			# Drop the last row, c6
+
+full_count_table <- DESeqDataSetFromMatrix(countData = count_data, colData = coldata, design = ~Culture) # Construct the deseq-dataframe
+dds <- DESeq(full_count_table)		# Run the analysis
+res <- results(dds)				# View the result
