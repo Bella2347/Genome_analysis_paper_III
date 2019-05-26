@@ -6,59 +6,135 @@ biocLite("DESeq2")
 
 library("DESeq2")
 
+
 # Load the count data
-b1_p <- read.table("../rna_analysis/4_count/htseq_count_b1.txt", header=FALSE, sep="\t”)
-b1_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b1.txt", header=FALSE, sep="\t”)
-b1_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b1.txt", header=FALSE, sep="\t”)
+b1_p <- read.table("../rna_analysis/4_count/htseq_count_b1.txt", header=FALSE, sep="\t")
+b1_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b1.txt", header=FALSE, sep="\t")
+b1_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b1.txt", header=FALSE, sep="\t")
 
-b2_p <- read.table("../rna_analysis/4_count/htseq_count_b2.txt", header=FALSE, sep="\t”)
-b2_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b2.txt", header=FALSE, sep="\t”)
-b2_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b2.txt", header=FALSE, sep="\t”)
+b2_p <- read.table("../rna_analysis/4_count/htseq_count_b2.txt", header=FALSE, sep="\t")
+b2_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b2.txt", header=FALSE, sep="\t")
+b2_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b2.txt", header=FALSE, sep="\t")
 
-b3_p <- read.table("../rna_analysis/4_count/htseq_count_b3.txt", header=FALSE, sep="\t”)
-b3_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b3.txt", header=FALSE, sep="\t”)
-b3_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b3.txt", header=FALSE, sep="\t”)
+b3_p <- read.table("../rna_analysis/4_count/htseq_count_b3.txt", header=FALSE, sep="\t")
+b3_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b3.txt", header=FALSE, sep="\t")
+b3_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b3.txt", header=FALSE, sep="\t")
 
-b4_p <- read.table("../rna_analysis/4_count/htseq_count_b4.txt", header=FALSE, sep="\t”)
-b4_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b4.txt", header=FALSE, sep="\t”)
-b4_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b4.txt", header=FALSE, sep="\t”)
+b4_p <- read.table("../rna_analysis/4_count/htseq_count_b4.txt", header=FALSE, sep="\t")
+b4_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_b4.txt", header=FALSE, sep="\t")
+b4_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_b4.txt", header=FALSE, sep="\t")
 
-c1_p <- read.table("../rna_analysis/4_count/htseq_count_c1.txt", header=FALSE, sep="\t”)
-c1_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c1.txt", header=FALSE, sep="\t”)
-c1_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c1.txt", header=FALSE, sep="\t”)
+c1_p <- read.table("../rna_analysis/4_count/htseq_count_c1.txt", header=FALSE, sep="\t")
+c1_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c1.txt", header=FALSE, sep="\t")
+c1_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c1.txt", header=FALSE, sep="\t")
 
-c2_p <- read.table("../rna_analysis/4_count/htseq_count_c2.txt", header=FALSE, sep="\t”)
-c2_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c2.txt", header=FALSE, sep="\t”)
-c2_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c2.txt", header=FALSE, sep="\t”)
+c2_p <- read.table("../rna_analysis/4_count/htseq_count_c2.txt", header=FALSE, sep="\t")
+c2_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c2.txt", header=FALSE, sep="\t")
+c2_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c2.txt", header=FALSE, sep="\t")
 
-c3_p <- read.table("../rna_analysis/4_count/htseq_count_c3.txt", header=FALSE, sep="\t”)
-c3_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c3.txt", header=FALSE, sep="\t”)
-c3_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c3.txt", header=FALSE, sep="\t”)
+c3_p <- read.table("../rna_analysis/4_count/htseq_count_c3.txt", header=FALSE, sep="\t")
+c3_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c3.txt", header=FALSE, sep="\t")
+c3_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c3.txt", header=FALSE, sep="\t")
 
-c4_p <- read.table("../rna_analysis/4_count/htseq_count_c4.txt", header=FALSE, sep="\t”)
-c4_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c4.txt", header=FALSE, sep="\t”)
-c4_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c4.txt", header=FALSE, sep="\t”)
+c4_p <- read.table("../rna_analysis/4_count/htseq_count_c4.txt", header=FALSE, sep="\t")
+c4_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c4.txt", header=FALSE, sep="\t")
+c4_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c4.txt", header=FALSE, sep="\t")
 
-c5_p <- read.table("../rna_analysis/4_count/htseq_count_c5.txt", header=FALSE, sep="\t”)
-c5_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c5.txt", header=FALSE, sep="\t”)
-c5_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c5.txt", header=FALSE, sep="\t”)
+c5_p <- read.table("../rna_analysis/4_count/htseq_count_c5.txt", header=FALSE, sep="\t")
+c5_s1 <- read.table("../rna_analysis/4_count/htseq_count_S1_c5.txt", header=FALSE, sep="\t")
+c5_s2 <- read.table("../rna_analysis/4_count/htseq_count_S2_c5.txt", header=FALSE, sep="\t")
 
-colnames(b1) <- c("gene", "b1")			# Set the column names
-...
 
-count_table <- merge(b1, b2, by = "gene")	# Merge the count-data into one data frame
-count_data <- count_table[,-1]			# Save new dataset without the gene names
+# Set the column names
+colnames(b1_p) <- c("gene", "b1_p")
+colnames(b1_s1) <- c("gene", "b1_s1")
+colnames(b1_s2) <- c("gene", "b1_s2")
 
-rownames(count_data) <- count_table[,1]	# Set the row names as the gene names
+colnames(b2_p) <- c("gene", "b2_p")
+colnames(b2_s1) <- c("gene", "b2_s1")
+colnames(b2_s2) <- c("gene", "b2_s2")
 
-coldata <- read.tabel(“infromation_on_runs.csv”, header=TRUE, sep=”,”) # Read in information about the runs
-coldata <- coldata[-c(10),]			# Drop the last row, c6
+colnames(b3_p) <- c("gene", "b3_p")
+colnames(b3_s1) <- c("gene", "b3_s1")
+colnames(b3_s2) <- c("gene", "b3_s2")
 
-full_count_table <- DESeqDataSetFromMatrix(countData = count_data, colData = coldata, design = ~Culture) # Construct the deseq-dataframe
-dds <- DESeq(full_count_table)		# Run the analysis
-res <- results(dds, c("Culture", "Continuous", "Batch"))				# View the result
+colnames(b4_p) <- c("gene", "b4_p")
+colnames(b4_s1) <- c("gene", "b4_s1")
+colnames(b4_s2) <- c("gene", "b4_s2")
 
-res <- res[ ! is.na(res$pvalue), ]        # Remove rows with NA
+colnames(c1_p) <- c("gene", "c1_p")
+colnames(c1_s1) <- c("gene", "c1_s1")
+colnames(c1_s2) <- c("gene", "c1_s2")
 
-sig <- res[ which(res$padj < 0.01), ]   # Sorting on adjusted p-value sorts on the expected false discovery rate, here 1%
-sig <- sig[ order(sig$padj), ]        # Order the significant genes
+colnames(c2_p) <- c("gene", "c2_p")
+colnames(c2_s1) <- c("gene", "c2_s1")
+colnames(c2_s2) <- c("gene", "c2_s2")
+
+colnames(c3_p) <- c("gene", "c3_p")
+colnames(c3_s1) <- c("gene", "c3_s1")
+colnames(c3_s2) <- c("gene", "c3_s2")
+
+colnames(c4_p) <- c("gene", "c4_p")
+colnames(c4_s1) <- c("gene", "c4_s1")
+colnames(c4_s2) <- c("gene", "c4_s2")
+
+colnames(c5_p) <- c("gene", "c5_p")
+colnames(c5_s1) <- c("gene", "c5_s1")
+colnames(c5_s2) <- c("gene", "c5_s2")
+
+
+# Merge the count-data into one data frame
+count_table <- merge(b1_p, b1_s1, by = "gene") 
+count_table <- merge(count_table, b1_s2, by = "gene")
+count_table <- merge(count_table, b2_p, by = "gene")
+count_table <- merge(count_table, b2_s1, by = "gene")
+count_table <- merge(count_table, b2_s2, by = "gene")
+count_table <- merge(count_table, b3_p, by = "gene")
+count_table <- merge(count_table, b3_s1, by = "gene")
+count_table <- merge(count_table, b3_s2, by = "gene")
+count_table <- merge(count_table, b4_p, by = "gene")
+count_table <- merge(count_table, b4_s1, by = "gene")
+count_table <- merge(count_table, b4_s2, by = "gene")
+count_table <- merge(count_table, c1_p, by = "gene")
+count_table <- merge(count_table, c1_s1, by = "gene")
+count_table <- merge(count_table, c1_s2, by = "gene")
+count_table <- merge(count_table, c2_p, by = "gene")
+count_table <- merge(count_table, c2_s1, by = "gene")
+count_table <- merge(count_table, c2_s2, by = "gene")
+count_table <- merge(count_table, c3_p, by = "gene")
+count_table <- merge(count_table, c3_s1, by = "gene")
+count_table <- merge(count_table, c3_s2, by = "gene")
+count_table <- merge(count_table, c4_p, by = "gene")
+count_table <- merge(count_table, c4_s1, by = "gene")
+count_table <- merge(count_table, c4_s2, by = "gene") 
+count_table <- merge(count_table, c5_p, by = "gene")
+count_table <- merge(count_table, c5_s1, by = "gene")
+count_table <- merge(count_table, c5_s2, by = "gene")
+
+
+count_data <- count_table[,-1]				# Save new dataset without the gene names
+rownames(count_data) <- count_table[,1]			# Set the row names as the gene names
+
+count_data <- count_data[-c(1,2,3,4,5),]		# Remove the rows corresponding to: alignment_not_unique, ambiguous, no_feature, not_aligned and too_low_aQual.
+
+
+coldata <- read.table(“infromation_on_runs.csv”, header=TRUE, sep=”,”) # Read in information about the runs
+coldata <- coldata[-c(28,29,30),]			# Drop the last rows corresponding to the run c6
+
+
+dds_count_table <- DESeqDataSetFromMatrix(countData = count_data, colData = coldata, design = ~Culture) 
+# Construct the deseq-dataframe
+dds_collapsed <- collapseReplicates(dds_count_table, groupby = dds_count_table$Sample, run = dds_count_table$Run)
+# Collapse the technical replicates, the result is 5 samples, 2 batch, 3 continuous
+
+
+dds_analys <- DESeq(dds_collapsed)			# Run the analysis
+
+res <- results(dds_analys, c("Culture", "Continuous", "Batch"))# View the result
+res <- res[ ! is.na(res$pvalue), ]		        # Remove rows with NA
+
+sig <- res[ which(res$padj < 0.01), ]   		# Sorting on adjusted p-value sorts on the expected false discovery rate, here 1%
+sig <- sig[ order(sig$padj), ]        			# Order the significant genes
+sig_df <- as.data.frame(sig)				# Convert to data frame
+
+write.table(sig_df, file = "significant_genes.tsv", sep="\t")	# Write to a tab-seperated file
