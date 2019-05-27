@@ -1,0 +1,44 @@
+# Awk-commands to find functional annotations for the significant genes
+
+# Take all locus tags and write to a separate file
+awk '{print $2}' significant_genes.tsv > sign_locus_tag.txt
+
+# Sort tags
+sort sign_locus_tag.txt > sorted_locus_tags.txt
+
+ 
+# Take all lines in the prokka annotation that match the locus tag in significant gens
+awk -F $'\t' 'BEGIN { while(getline <"sorted_locus_tags.txt") gene[$1]=1; } gene[$1]' ../dna_analysis/3_annotation/prokka/1_prokka_annotation.tsv > prokka_sign_locus_tags.tsv
+
+# Do the same for the EggNOGmapper annotation
+awk -F $'\t' 'BEGIN { while(getline <"sorted_locus_tags.txt") gene[$1]=1; } gene[$1]' ../dna_analysis/3_annotation/emapper/1_prokka_annotation.faa.emapper.annotations > emapper_sign_locus_tags.tsv
+
+# Count number of hypothetical proteins among the significant genes
+grep "hypothetical protein" prokka_sign_locus_tags.tsv | wc -l
+
+# Count the number of genes within diferent COGs categories
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="D"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="M"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="N"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="O"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="T"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="U"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="V"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="W"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="Y"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="Z"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="A"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="B"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="J"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="K"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="L"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="C"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="E"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="F"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="G"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="H"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="I"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="P"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="Q"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="R"' | wc -l
+cat emapper_sign_locus_tags.tsv | awk -F '\t' '$12=="S"' | wc -l
