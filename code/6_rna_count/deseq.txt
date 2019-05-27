@@ -137,4 +137,4 @@ sig <- res[ which(res$padj < 0.01), ]   		# Sorting on adjusted p-value sorts on
 sig <- sig[ order(sig$padj), ]        			# Order the significant genes
 sig_df <- as.data.frame(sig)				# Convert to data frame
 
-write.table(sig_df, file = "significant_genes.tsv", sep="\t")	# Write to a tab-seperated file
+write.table(sig_df, file = "significant_genes.tsv", sep="\t", quote=FALSE)	# Write to a tab-seperated file
