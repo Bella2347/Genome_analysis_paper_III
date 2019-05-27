@@ -9,3 +9,9 @@ awk '/^>/ {F = $2".fasta"} {print > F}' ../1_canu_dna_assembly.contigs.fasta
 
 # remove the fasta sequence at the end of the gff file
 sed '/^##FASTA$/,$d' 1_prokka_annotation.gff > prokka_annotation_without_fasta.gff
+
+# Count number of hypothetical proteins in the prokka annotation
+genome_analysis]$ grep "hypothetical protein" dna_analysis/3_annotation/prokka/1_prokka_annotation.tsv | wc -l
+# 1169
+wc -l dna_analysis/3_annotation/prokka/1_prokka_annotation.tsv
+# 2723-1=2722, the first line is a header
