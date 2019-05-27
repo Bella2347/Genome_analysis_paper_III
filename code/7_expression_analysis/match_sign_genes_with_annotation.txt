@@ -1,4 +1,5 @@
 # The R code for matching the significant genes from DESeq with the annotation in prokka and emapper
+# There is something wrong when I load the annotation files even though they are tab-separated!!!!
 
 # Read in the prokka annotation
 prokka_annotation <- read.table("../dna_analysis/3_annotation/prokka/1_prokka_annotation.tsv", header=TRUE, sep="\t")
