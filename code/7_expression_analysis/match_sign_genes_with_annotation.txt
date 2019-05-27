@@ -1,0 +1,29 @@
+# The R code for matching the significant genes from DESeq with the annotation in prokka and emapper
+
+# Read in the prokka annotation
+prokka_annotation <- read.table("../dna_analysis/3_annotation/prokka/1_prokka_annotation.tsv", header=TRUE, sep="\t")
+
+# Read in the emapper annotation
+emapper_annotation <- read.table("../dna_analysis/3_annotation/emapper/1_prokka_annotation.faa.emapper.annotations", header=FALSE, sep="\t")
+
+# Drop most columns
+emapper_annotation <- emapper_annotation[ -c(3, 4, 6, 7, 8, 9, 10, 11)]
+
+# Set the column names
+colnames(emapper_annotation) <- c("locus_tag", "seed_eggNOG_ortholog", "predicted_gene_name", "COG functional categories", "eggNOG_HMM_model_annotation")
+
+library(data.table)
+setDT(sig_df, keep.rownames = TRUE)[]		# Makes the dataframe into a data table and makes the rownames a column
+sig_df <- as.data.frame(sig_df)			# Turn back into a dataframe
+colnames(sig_df)[1] <- "locus_tag"		# Set the name of the first column
+
+# Order the genes for esier merging
+sig_df_ordered <- sig_df[order(sig_df$locus_tag),]
+
+# Join the sign genes with the prokka annotation, left outer join
+sig_annotation <- merge(sig_df_ordered,prokka_annotation,by="locus_tag",all.x=TRUE)
+# Join the emapper annotation 
+sig_annotation <- merge(sig_annotation,emapper_annotation,by="locus_tag",all.x=TRUE)
+
+# Write the significant genes with the annotation
+write.table(sig_annotation, file = "significant_genes_with_annotation.tsv", sep="\t", row.names=FALSE, quote=FALSE, na="")
