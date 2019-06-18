@@ -1,2 +1,2 @@
->quast.py ../assembly/1_canu_dna_assembly.contigs.fasta
-The out files are in dna_analysis/assembly_assessment/quast
+# The command used for quast
+quast.py ../assembly/1_canu_dna_assembly.contigs.fasta
