@@ -1,8 +1,0 @@
-module load bioinfo-tools 
-module load eggNOG-mapper/1.0.3
-
-# run with:
-python emapper.py -i file.fa --output diretory(?) -d database (bact)
-
-emapper.py -i /home/bella/genome_analysis/dna_analysis/1_assembly/1_canu_dna_assembly.contigs.fasta
- -d bact -o emapper_annotation --output_dir /home/bella/genome_analysis/dna_analysis/3_annotation/emapper
