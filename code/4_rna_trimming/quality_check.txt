@@ -1,19 +1,10 @@
-# The quality of the RNA-reads should be checked before trimming to see what the parameters should
-# be set to in the trimming process
+# The command used for quality check with FastQC
 
-module load bioinfo-tools
-module load FastQC/0.11.5
-
-fastqc -o /home/bella/genome_analysis/rna_analysis/1_quality\
-  -f fastq /home/bella/genome_analysis/data/rna/batch_14B_31_1.fastq.gz
+# Untrimmed reads
+module load bioinfo-tools FastQC/0.11.5
+fastqc -o /home/bella/genome_analysis/rna_analysis/1_quality -f fastq /home/bella/genome_analysis/data/rna/batch_14B_31_1.fastq.gz
 
 
 # Quality check of the trimmed reads
 module load bioinfo-tools FastQC/0.11.5
-
 fastqc -f fastq /home/bella/genome_analysis/rna_analysis/2_trimming/trimmed_batch_14B_31_1_paired.fastq.gz
-
-# They ended up in the same diretory as the trimmed-reads, they were later moved to the 1_quality folder
-unzip trimmed_batch_14B_31_1_paired_fastqc.zip
-# view
-xdg-open trimmed_batch_14B_31_1_paired_fastqc/Images/per_base_quality.png
