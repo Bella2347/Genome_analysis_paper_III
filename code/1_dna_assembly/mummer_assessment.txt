@@ -1,12 +1,11 @@
->mummer -b ../../data/ref/OBMB01.fasta ../assembly/1_canu_dna_assembly.contigs.fasta > output.txt
+# The commands used to generate the mummerplot
+nucmer ../../../data/ref/OBMB01.fasta ../../assembly/1_canu_dna_assembly.contigs.fasta
+# generated the file out.delta
 
->nucmer ../../../data/ref/OBMB01.fasta ../../assembly/1_canu_dna_assembly.contigs.fasta
-generated the file out.delta
+mummerplot out.delta
+# Generated these files:
+# out.fplot  out.gp  out.rplot
 
->mummerplot out.delta
-Generated these files:
->out.fplot  out.gp  out.rplot
-
-To view the file:
->gnuplot
+# To view the file:
+gnuplot
 >>load "out.gp"
