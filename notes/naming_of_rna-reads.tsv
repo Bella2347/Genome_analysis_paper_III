@@ -1,0 +1,31 @@
+Name	Read	Culture	Sample	Run	Raw reads names
+b1_p	Paired	Batch	LNU-LXX9-Si00-14B-P	ERR2036631	batch_14B_31
+b1_s1	Single	Batch	LNU-LXX9-Si00-14B-P	ERR2036631	
+b1_s2	Single	Batch	LNU-LXX9-Si00-14B-P	ERR2036631	
+b2_p	Paired	Batch	LNU-LXX9-Si00-14B-P	ERR2117290	batch_14B_90
+b2_s1	Single	Batch	LNU-LXX9-Si00-14B-P	ERR2117290	
+b2_s2	Single	Batch	LNU-LXX9-Si00-14B-P	ERR2117290	
+b3_p	Paired	Batch	LNU-LXX9-Si00-14C-P	ERR2036632	batch_14C_32
+b3_s1	Single	Batch	LNU-LXX9-Si00-14C-P	ERR2036632	
+b3_s2	Single	Batch	LNU-LXX9-Si00-14C-P	ERR2036632	
+b4_p	Paired	Batch	LNU-LXX9-Si00-14C-P	ERR2117291	batch_14C_91
+b4_s1	Single	Batch	LNU-LXX9-Si00-14C-P	ERR2117291	
+b4_s2	Single	Batch	LNU-LXX9-Si00-14C-P	ERR2117291	
+c1_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2036630	cont_B1_30
+c1_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2036630	
+c1_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2036630	
+c2_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2117289	cont_B1_89
+c2_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2117289	
+c2_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B1	ERR2117289	
+c3_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2036633	cont_B6_33
+c3_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2036633	
+c3_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2036633	
+c4_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2117292	cont_B6_92
+c4_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2117292	
+c4_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B6	ERR2117292	
+c5_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2036629	cont_B7_29
+c5_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2036629	
+c5_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2036629	
+c6_p	Paired	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2117288	cont_B7_88
+c6_s1	Single	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2117288	
+c6_s2	Single	Continuous	LNU-LXX9-Si00-CnA-P-B7	ERR2117288	
